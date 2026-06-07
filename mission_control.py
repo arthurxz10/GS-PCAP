@@ -1,16 +1,11 @@
-# =============================================================
 # MISSION CONTROL AI — MISSÃO ORION
 # FIAP • GS 2026.1 • Turma 1CCPY • Grupo 05
-# =============================================================
 # Integrantes:
 #   Arthur dos Santos Bezerra  — RM 569721
 #   Carlos Henrique Fratezi    — RM 571792
 #   Felipe Gouveia Braga       — RM 568956
-# =============================================================
 
-# ------------------------------------------------------------------
 # DADOS DA MISSÃO
-# ------------------------------------------------------------------
 
 NOME_MISSAO = "Missão ORION"
 NOME_EQUIPE  = "Grupo 05 — 1CCPY"
@@ -49,9 +44,7 @@ areas_monitoradas = [
 ]
 
 
-# =============================================================
 # FUNÇÕES DE ANÁLISE — uma por sensor
-# =============================================================
 
 def analisar_temperatura(valor):
     """
@@ -132,9 +125,7 @@ def analisar_estabilidade(valor):
         return "NORMAL", "Estabilidade operacional adequada", 0
 
 
-# =============================================================
 # FUNÇÃO: calcular risco de um ciclo
-# =============================================================
 
 def calcular_risco_ciclo(ciclo):
     """
@@ -154,9 +145,7 @@ def calcular_risco_ciclo(ciclo):
     return pontuacao, resultados
 
 
-# =============================================================
 # FUNÇÃO: classificar ciclo
-# =============================================================
 
 def classificar_ciclo(pontuacao):
     """
@@ -172,9 +161,7 @@ def classificar_ciclo(pontuacao):
         return "MISSÃO CRÍTICA"
 
 
-# =============================================================
 # FUNÇÃO: gerar recomendação automática para um ciclo
-# =============================================================
 
 def gerar_recomendacao(resultados):
     """
@@ -207,9 +194,7 @@ def gerar_recomendacao(resultados):
     return "Recomendação: " + "; ".join(recomendacoes).capitalize() + "."
 
 
-# =============================================================
 # FUNÇÃO: analisar tendência da missão
-# =============================================================
 
 def analisar_tendencia(riscos):
     """
@@ -227,9 +212,7 @@ def analisar_tendencia(riscos):
         return "A missão permaneceu ESTÁVEL em relação ao início."
 
 
-# =============================================================
 # FUNÇÃO: identificar área mais afetada
-# =============================================================
 
 def identificar_area_mais_afetada(dados_missao, areas_monitoradas):
     """
@@ -256,9 +239,7 @@ def identificar_area_mais_afetada(dados_missao, areas_monitoradas):
     return areas_monitoradas[idx_max], pontos_por_area[idx_max], pontos_por_area
 
 
-# =============================================================
 # FUNÇÃO: exibir análise de cada ciclo (loop principal)
-# =============================================================
 
 def exibir_ciclos(dados_missao):
     """
@@ -292,9 +273,7 @@ def exibir_ciclos(dados_missao):
     return riscos
 
 
-# =============================================================
 # FUNÇÃO: relatório final da missão
-# =============================================================
 
 def gerar_relatorio_final(dados_missao, areas_monitoradas, riscos):
     """
@@ -372,9 +351,7 @@ def gerar_relatorio_final(dados_missao, areas_monitoradas, riscos):
     print("=" * 60)
 
 
-# =============================================================
 # EXECUÇÃO PRINCIPAL
-# =============================================================
 
 def main():
     print()
